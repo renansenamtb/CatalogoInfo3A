@@ -39,6 +39,8 @@
 // No conteúdo do botão, coloque o texto "Remover".
 
 import { useState } from "react";
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function Home() {
   const [listaProdutos, setProdutos] = useState([
@@ -72,7 +74,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Games Retrô</h1>
+      <Header title="Games Retrô" />
       {listaProdutos.map((produto) => (
         <div key={produto.id}>
           <p>{produto.nome}</p>
@@ -89,6 +91,9 @@ export default function Home() {
           </div>
         )
     }
+    <Footer desenvolvedor="Renan Sena" />
     </div>
+
+
   );
 }
